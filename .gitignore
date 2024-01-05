@@ -39,6 +39,7 @@ bower_components
 build/Release
 
 .contract/build
+.contract/node_modules/
 
 
 # Dependency directories
@@ -133,3 +134,21 @@ dist
 .pnp.*
 
 .DS_Store
+
+node_modules
+build
+coverage
+coverage.json
+deployments
+typechain-types
+*.log
+.env
+
+
+.DS_Store
+.zos.session
+env/
+.env
+.history
+coverage*
+.certora_internal
