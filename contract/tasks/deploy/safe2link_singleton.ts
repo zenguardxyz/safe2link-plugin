@@ -6,7 +6,7 @@ const deploy: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployer } = await getNamedAccounts()
   const { deploy } = deployments
 
-  await deploy('Safe2LinkModule', {
+  await deploy('Safe2LinkPlugin', {
     from: deployer,
     args: [],
     log: true,

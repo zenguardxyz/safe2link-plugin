@@ -26,13 +26,57 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IERC20__factory>;
     getContractFactory(
+      name: "IERC165",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IERC165__factory>;
+    getContractFactory(
+      name: "ISafe",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ISafe__factory>;
+    getContractFactory(
+      name: "ISafeProtocolFunctionHandler",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ISafeProtocolFunctionHandler__factory>;
+    getContractFactory(
+      name: "ISafeProtocolHooks",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ISafeProtocolHooks__factory>;
+    getContractFactory(
+      name: "ISafeProtocolPlugin",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ISafeProtocolPlugin__factory>;
+    getContractFactory(
+      name: "ISafeProtocolStaticFunctionHandler",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ISafeProtocolStaticFunctionHandler__factory>;
+    getContractFactory(
+      name: "ISafeProtocolManager",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ISafeProtocolManager__factory>;
+    getContractFactory(
+      name: "BasePlugin",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.BasePlugin__factory>;
+    getContractFactory(
+      name: "BasePluginWithEventMetadata",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.BasePluginWithEventMetadata__factory>;
+    getContractFactory(
+      name: "BasePluginWithStoredMetadata",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.BasePluginWithStoredMetadata__factory>;
+    getContractFactory(
+      name: "IMetadataProvider",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IMetadataProvider__factory>;
+    getContractFactory(
       name: "GnosisSafe",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.GnosisSafe__factory>;
     getContractFactory(
-      name: "Safe2LinkModule",
+      name: "Safe2LinkPlugin",
       signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.Safe2LinkModule__factory>;
+    ): Promise<Contracts.Safe2LinkPlugin__factory>;
     getContractFactory(
       name: "ISafe",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -58,15 +102,70 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.IERC20>;
     getContractAt(
+      name: "IERC165",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IERC165>;
+    getContractAt(
+      name: "ISafe",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ISafe>;
+    getContractAt(
+      name: "ISafeProtocolFunctionHandler",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ISafeProtocolFunctionHandler>;
+    getContractAt(
+      name: "ISafeProtocolHooks",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ISafeProtocolHooks>;
+    getContractAt(
+      name: "ISafeProtocolPlugin",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ISafeProtocolPlugin>;
+    getContractAt(
+      name: "ISafeProtocolStaticFunctionHandler",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ISafeProtocolStaticFunctionHandler>;
+    getContractAt(
+      name: "ISafeProtocolManager",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ISafeProtocolManager>;
+    getContractAt(
+      name: "BasePlugin",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.BasePlugin>;
+    getContractAt(
+      name: "BasePluginWithEventMetadata",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.BasePluginWithEventMetadata>;
+    getContractAt(
+      name: "BasePluginWithStoredMetadata",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.BasePluginWithStoredMetadata>;
+    getContractAt(
+      name: "IMetadataProvider",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IMetadataProvider>;
+    getContractAt(
       name: "GnosisSafe",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
     ): Promise<Contracts.GnosisSafe>;
     getContractAt(
-      name: "Safe2LinkModule",
+      name: "Safe2LinkPlugin",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
-    ): Promise<Contracts.Safe2LinkModule>;
+    ): Promise<Contracts.Safe2LinkPlugin>;
     getContractAt(
       name: "ISafe",
       address: string | ethers.Addressable,
@@ -91,13 +190,57 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.IERC20>;
     deployContract(
+      name: "IERC165",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.IERC165>;
+    deployContract(
+      name: "ISafe",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ISafe>;
+    deployContract(
+      name: "ISafeProtocolFunctionHandler",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ISafeProtocolFunctionHandler>;
+    deployContract(
+      name: "ISafeProtocolHooks",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ISafeProtocolHooks>;
+    deployContract(
+      name: "ISafeProtocolPlugin",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ISafeProtocolPlugin>;
+    deployContract(
+      name: "ISafeProtocolStaticFunctionHandler",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ISafeProtocolStaticFunctionHandler>;
+    deployContract(
+      name: "ISafeProtocolManager",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ISafeProtocolManager>;
+    deployContract(
+      name: "BasePlugin",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.BasePlugin>;
+    deployContract(
+      name: "BasePluginWithEventMetadata",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.BasePluginWithEventMetadata>;
+    deployContract(
+      name: "BasePluginWithStoredMetadata",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.BasePluginWithStoredMetadata>;
+    deployContract(
+      name: "IMetadataProvider",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.IMetadataProvider>;
+    deployContract(
       name: "GnosisSafe",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.GnosisSafe>;
     deployContract(
-      name: "Safe2LinkModule",
+      name: "Safe2LinkPlugin",
       signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.Safe2LinkModule>;
+    ): Promise<Contracts.Safe2LinkPlugin>;
     deployContract(
       name: "ISafe",
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -123,15 +266,70 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.IERC20>;
     deployContract(
+      name: "IERC165",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.IERC165>;
+    deployContract(
+      name: "ISafe",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ISafe>;
+    deployContract(
+      name: "ISafeProtocolFunctionHandler",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ISafeProtocolFunctionHandler>;
+    deployContract(
+      name: "ISafeProtocolHooks",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ISafeProtocolHooks>;
+    deployContract(
+      name: "ISafeProtocolPlugin",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ISafeProtocolPlugin>;
+    deployContract(
+      name: "ISafeProtocolStaticFunctionHandler",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ISafeProtocolStaticFunctionHandler>;
+    deployContract(
+      name: "ISafeProtocolManager",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ISafeProtocolManager>;
+    deployContract(
+      name: "BasePlugin",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.BasePlugin>;
+    deployContract(
+      name: "BasePluginWithEventMetadata",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.BasePluginWithEventMetadata>;
+    deployContract(
+      name: "BasePluginWithStoredMetadata",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.BasePluginWithStoredMetadata>;
+    deployContract(
+      name: "IMetadataProvider",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.IMetadataProvider>;
+    deployContract(
       name: "GnosisSafe",
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.GnosisSafe>;
     deployContract(
-      name: "Safe2LinkModule",
+      name: "Safe2LinkPlugin",
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.Safe2LinkModule>;
+    ): Promise<Contracts.Safe2LinkPlugin>;
     deployContract(
       name: "ISafe",
       args: any[],

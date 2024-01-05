@@ -9,7 +9,10 @@ import { createSafeAccount, sendTransaction } from "./permissionless";
 import { getTokenDecimals } from "./utils";
 
 
-const moduleAddress = "0xaB83F7041C82D5a915E608D887073B6C52a28459"
+// Plugin and Manager address
+
+const moduleAddress = "0x664e3acE00b41ab503936010c7EBa9c7Fe24A4B9"
+const managerAddress = "0x548ffe3207b643a6d95F7bfa01b5D4A0fb7DF01a"
 
 const getLinkCount = async (): Promise<number> => {
 
@@ -158,7 +161,7 @@ export const claimLink = async(chainId: string, index: number, seed: string, acc
         bProvider
     )
 
-    const data = await safe2link.claimLink.populateTransaction(index, account.address, addressHashEIP191, signature)
+    const data = await safe2link.claimLink.populateTransaction(index, account.address, addressHashEIP191, signature, managerAddress)
 
 
     return await sendTransaction(chainId, moduleAddress, data.data, account)
@@ -180,11 +183,6 @@ export const createLink = async (token: string, amount: string) => {
     const randomSeed = generateRandomString(18)
 
     const { address, privateKey } = generateKeysFromString(randomSeed)
-
-
-    if (!await isModuleEnabled(info.safeAddress, moduleAddress)) {
-        txs.push(await buildEnableModule(info.safeAddress, moduleAddress))
-    }
 
     txs.push(await buildCreateLink(address, token, amount))
 

@@ -19,8 +19,9 @@
   "author": "richard@gnosis.io",
   "license": "ISC",
   "dependencies": {
-		"ethersv5": "npm:ethers@^5"
-	},
+    "@safe-global/safe-core-protocol": "../../safe-core-protocol/",
+    "ethersv5": "npm:ethers@^5"
+  },
   "devDependencies": {
     "@gnosis.pm/safe-contracts": "1.3.0",
     "@nomicfoundation/hardhat-chai-matchers": "2.0.2",
@@ -39,12 +40,12 @@
     "@typescript-eslint/parser": "^6.4.1",
     "chai": "^4.3.7",
     "dotenv": "^16.0.3",
-    "ethers": "^6.7.1",
     "eslint": "^8.6.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "^5.0.0",
+    "ethers": "^6.7.1",
     "hardhat": "^2.12.5",
     "hardhat-deploy": "^0.11.37",
     "hardhat-gas-reporter": "^1.0.9",
