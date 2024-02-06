@@ -7,12 +7,12 @@ import { getJsonRpcProvider, getProvider } from "./web3";
 import Safe2LinkModule from "./Safe2LinkModule.json"
 import { createSafeAccount, sendTransaction } from "./permissionless";
 import { getTokenDecimals } from "./utils";
+import { NetworkUtil } from "./networks";
 
 
 // Plugin and Manager address
 
 const moduleAddress = "0x664e3acE00b41ab503936010c7EBa9c7Fe24A4B9"
-const managerAddress = "0x548ffe3207b643a6d95F7bfa01b5D4A0fb7DF01a"
 
 const getLinkCount = async (): Promise<number> => {
 
@@ -161,7 +161,7 @@ export const claimLink = async(chainId: string, index: number, seed: string, acc
         bProvider
     )
 
-    const data = await safe2link.claimLink.populateTransaction(index, account.address, addressHashEIP191, signature, managerAddress)
+    const data = await safe2link.claimLink.populateTransaction(index, account.address, addressHashEIP191, signature, NetworkUtil.getNetworkById(parseInt(chainId))?.managerAddress)
 
 
     return await sendTransaction(chainId, moduleAddress, data.data, account)

@@ -24,6 +24,7 @@ export const networks = {
     blockExplorer: "",
     api: "",
     easExplorer: "",
+    managerAddress: '',
   },
   mainnet: {
     name: 'Ethereum',
@@ -34,6 +35,7 @@ export const networks = {
     blockExplorer: "https://etherscan.io",
     api: `https://api.etherscan.io/api?apikey=${ETHERSCAN_API_KEY}`,
     easExplorer: "",
+    managerAddress: '0x6CB0CcE62E70BF2e88EEeb125197A133873525A7',
   },
   goerli: {
     name: 'Goerli',
@@ -44,6 +46,7 @@ export const networks = {
     blockExplorer: "https://goerli.etherscan.io",
     api: `https://api-goerli.etherscan.io/api?apikey=${ETHERSCAN_API_KEY}`,
     easExplorer: "",
+    managerAddress: '0x6CB0CcE62E70BF2e88EEeb125197A133873525A7',
   },
   sepolia: {
     name: 'Sepolia',
@@ -54,6 +57,7 @@ export const networks = {
     blockExplorer: "https://sepolia.etherscan.io",
     api: `https://api-sepolia.etherscan.io/api?apikey=${ETHERSCAN_API_KEY}`,
     easExplorer: "",
+    managerAddress: '0x6CB0CcE62E70BF2e88EEeb125197A133873525A7',
   },
   basegoerli: {
     name: 'Base Goerli',
@@ -64,6 +68,7 @@ export const networks = {
     safeService: "https://safe-transaction-base-testnet.safe.global",
     api: `https://api-goerli.etherscan.io/api?apikey=${ETHERSCAN_API_KEY}`,
     easExplorer: "https://base-goerli.easscan.org/attestation/view/",
+    managerAddress: '0x6CB0CcE62E70BF2e88EEeb125197A133873525A7',
   },
 
   base: {
@@ -75,6 +80,7 @@ export const networks = {
     safeService: "https://safe-transaction-base.safe.global",
     api: `https://api-goerli.etherscan.io/api?apikey=${ETHERSCAN_API_KEY}`,
     easExplorer: "",
+    managerAddress: '0x4D868f75E3230Eb6bD227e595915f3d0A1E9d252',
   },
   optimism: {
     name: 'Optimism',
@@ -85,6 +91,7 @@ export const networks = {
     safeService: "https://safe-transaction-optimism.safe.global",
     api: `https://api-optimistic.etherscan.io/api?apikey=${ETHERSCAN_API_KEY}`,
     easExplorer: "https://optimism.easscan.org/attestation/view/",
+    managerAddress: '0x6CB0CcE62E70BF2e88EEeb125197A133873525A7',
   },
   gnosis: {
     name: 'Gnosis',
@@ -95,6 +102,7 @@ export const networks = {
     blockExplorer: "https://gnosisscan.io",
     api: `https://api-goerli.etherscan.io/api?apikey=${ETHERSCAN_API_KEY}`,
     easExplorer: "",
+    managerAddress: '0x6CB0CcE62E70BF2e88EEeb125197A133873525A7',
   },
   polygontestnet: {
     name: 'Polygon',
@@ -105,6 +113,7 @@ export const networks = {
     blockExplorer: "https://mumbai.polygonscan.com",
     api: `https://api-testnet.polygonscan.com/api?module=account&action=balance&address=${accountAddress}&apikey=${POLYGONSCAN_API_KEY}`,
     easExplorer: "",
+    managerAddress: '0x6CB0CcE62E70BF2e88EEeb125197A133873525A7',
   },
   polygon: {
     name: 'Polygon',
@@ -115,6 +124,7 @@ export const networks = {
     blockExplorer: "https://polygonscan.com",
     api: "",
     easExplorer: "",
+    managerAddress: '0x6CB0CcE62E70BF2e88EEeb125197A133873525A7',
   },
   celo: {
     name: 'Celo',
@@ -125,6 +135,7 @@ export const networks = {
     blockExplorer: "https://celoscan.com",
     api: "",
     easExplorer: "",
+    managerAddress: '0x6CB0CcE62E70BF2e88EEeb125197A133873525A7',
   },
 
 
